@@ -36,7 +36,7 @@ const reducer = (state = initialState, action) => {
                     return[
                         ...todo,
                         {
-                            completed: !completed,
+                            completed: !todo.completed,
                         }
                     ]
                 });
@@ -73,7 +73,7 @@ const reducer = (state = initialState, action) => {
     
         
         default:
-            break;
+            return state;
     }
 }
 
